@@ -36,7 +36,7 @@ var tbb = tbb || {};
 
             $("<div />", {
                 "class" : "contest-detail",
-                "text" : value.prompt
+                "html" : value.prompt
             }).appendTo(contestImage);
 
             $("<a />", {
