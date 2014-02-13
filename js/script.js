@@ -41,7 +41,7 @@ var tbb = tbb || {};
             $("<a />", {
                 "class" : "submit-entry",
                 "href" : site + value.url,
-                "text" : "More details"
+                "text" : "Contest Page"
             }).appendTo(contestImage);
 
             prizes = $("<div />", {
