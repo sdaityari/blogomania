@@ -2,7 +2,7 @@ var tbb = tbb || {};
 
 (function (tbb, $) {
 
-    var site = "http://theblogbowl.in/";
+    var site = "http://theblogbowl.in";
 
     tbb.json_data = function (data) {
         $.each(data, function(index, value){
