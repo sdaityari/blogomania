@@ -115,7 +115,7 @@ body{
 .contest{
     float:left;
     margin-top: 40px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 3px solid #000;
 }
 .contest-name{
     font-family: 'MuseoSlab';
