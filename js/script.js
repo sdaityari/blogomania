@@ -2,8 +2,7 @@ var tbb = tbb || {};
 
 (function (tbb, $) {
 
-    //var site = "http://theblogbowl.in/";
-    var site = "http://theblogbowl.in";
+    var site = "http://theblogbowl.in/";
 
     tbb.json_data = function (data) {
         $.each(data, function(index, value){
@@ -49,21 +48,48 @@ var tbb = tbb || {};
                 "class" : "prizes"
             }).appendTo(wrapper);
 
-            prizeBlock = $("<div />", {
-                "class" : "prize-block",
-                "id" : "first-prize-block"
-            }).appendTo(prizes);
+            $.each(value.prizes, function (i, prize){
 
-            $("<div />", {
-                "class" : "position",
-                "id" : "first",
-                "text" : "Winner gets"
-            }).appendTo(prizeBlock);
+                if (prize === ''){
+                    return true;
+                }
 
-            $("<div />", {
-                "class" : "prize-text",
-                "text" : value.prize
-            }).appendTo(prizeBlock);
+                if (i === 'winner') {
+                    prizeBlock = $("<div />", {
+                        "class" : "prize-block",
+                        "id" : "first-prize-block"
+                    }).appendTo(prizes);
+
+                    $("<div />", {
+                        "class" : "position",
+                        "id" : "first",
+                        "text" : "Winner gets"
+                    }).appendTo(prizeBlock);
+                } else if (i === 'runner_up') {
+                    prizeBlock = $("<div />", {
+                        "class" : "prize-block",
+                    }).appendTo(prizes);
+
+                    $("<div />", {
+                        "class" : "position",
+                        "text" : "Runner up"
+                    }).appendTo(prizeBlock);
+                } else {
+                    prizeBlock = $("<div />", {
+                        "class" : "prize-block",
+                    }).appendTo(prizes);
+
+                    $("<div />", {
+                        "class" : "position",
+                        "text" : "Prizes for all"
+                    }).appendTo(prizeBlock);
+                }
+
+                $("<div />", {
+                    "class" : "prize-text",
+                    "text" : prize
+                }).appendTo(prizeBlock);
+            });
 
         });
     };
