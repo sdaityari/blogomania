@@ -41,7 +41,7 @@ body{
     width:800px;
     margin:0 auto;
 }
-.container img{
+.container #cogni_logo{
     width: 700px;
 }
 #header{
