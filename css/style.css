@@ -157,6 +157,10 @@ body{
 }
 .contest-detail{
     width:60%;
+    color: #fff;
+}
+.contest-detail a, .contest-detail a:visited{
+    color: #f0f0f0;
 }
 .submit-entry{
     margin-top:27px;
